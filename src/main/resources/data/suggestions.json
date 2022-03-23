@@ -1,0 +1,54 @@
+{
+"suggestions": [
+{
+"carColor": "BLUE",
+"timeOffset": 30,
+"location": "3,2"
+},
+{
+"carColor": "BLUE",
+"timeOffset": 30,
+"location": "6,2"
+},
+{
+"carColor": "BLUE",
+"timeOffset": 10,
+"location": "2,3"
+},
+{
+"carColor": "BLUE",
+"timeOffset": 10,
+"location": "11,3"
+},
+{
+"carColor": "BLUE",
+"timeOffset": -60,
+"location": "7,4"
+},
+{
+"carColor": "BLUE",
+"timeOffset": 0,
+"location": "7,7"
+},
+{
+"carColor": "BLUE",
+"timeOffset": 0,
+"location": "1,9"
+},
+{
+"carColor": "BLUE",
+"timeOffset": 5,
+"location": "12,9"
+},
+{
+"carColor": "GREEN",
+"timeOffset": 0,
+"location": "4,10"
+},
+{
+"carColor": "GREEN",
+"timeOffset": 0,
+"location": "1,12"
+}
+]
+}
