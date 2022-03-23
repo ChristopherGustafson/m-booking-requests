@@ -1,6 +1,6 @@
 # M Booking Requests
 
-Application that ranks suggestions of rental cars for a list of suggested cars and a booking requests.
+Application that ranks suggestions of rental cars given a list of available cars and a booking request.
 
 ## Input Data
 The input data of the application should be in the form of json files with the following structures:
