@@ -1,5 +1,6 @@
 package bookingrequests.models;
 
+import java.awt.print.Book;
 import java.sql.Time;
 
 public class TimeOffset implements SuggestionAspect {
@@ -25,11 +26,8 @@ public class TimeOffset implements SuggestionAspect {
     // Idea: calculate score differently depending on if offset is
     // negative (car available earlier) or positive (car available later)
     @Override
-    public double score(SuggestionAspect requestAspect) {
-        if(!(requestAspect instanceof TimeOffset))
-            throw new IllegalArgumentException("Can only calculate score compared to other TimeOffset");
-
-        TimeOffset requestOffset = (TimeOffset) requestAspect;
+    public double score(BookingRequest bookingRequest) {
+        TimeOffset requestOffset = bookingRequest.getTimeOffset();
 
         double offsetMagnitude = Math.abs(getTimeOffset() - requestOffset.getTimeOffset());
         double timeOffsetCutoff = 120.0;

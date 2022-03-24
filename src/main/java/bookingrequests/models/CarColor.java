@@ -16,11 +16,9 @@ public class CarColor implements SuggestionAspect {
     // Idea: could give larger scores than 0.3 if it is not same but
     // a similar color
     @Override
-    public double score(SuggestionAspect requestAspect) {
-        if(!(requestAspect instanceof CarColor))
-            throw new IllegalArgumentException("Can only calculate score compared to other CarColor");
+    public double score(BookingRequest bookingRequest) {
+        CarColor requestColor = bookingRequest.getCarColor();
 
-        CarColor requestColor = (CarColor) requestAspect;
         if(requestColor.getCarColor().equals(getCarColor())){
             return 0.7;
         }

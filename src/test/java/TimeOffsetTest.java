@@ -1,3 +1,4 @@
+import bookingrequests.models.BookingRequest;
 import bookingrequests.models.TimeOffset;
 import org.junit.jupiter.api.Test;
 
@@ -11,8 +12,10 @@ public class TimeOffsetTest {
         TimeOffset smallTimeOffset = new TimeOffset(-10);
         TimeOffset largeTimeOffset = new TimeOffset(60);
 
-        Double smallOffsetScore = smallTimeOffset.score(new TimeOffset(0));
-        Double largeOffsetScore = largeTimeOffset.score(new TimeOffset(0));
+        BookingRequest bookingRequest = new BookingRequest("BLUE", 0, 0);
+
+        Double smallOffsetScore = smallTimeOffset.score(bookingRequest);
+        Double largeOffsetScore = largeTimeOffset.score(bookingRequest);
 
         assertTrue(smallOffsetScore > largeOffsetScore,
                 "Score of small time offset: " + smallOffsetScore +

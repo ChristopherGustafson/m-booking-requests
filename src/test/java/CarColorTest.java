@@ -1,3 +1,4 @@
+import bookingrequests.models.BookingRequest;
 import bookingrequests.models.CarColor;
 import bookingrequests.models.TimeOffset;
 
@@ -13,10 +14,10 @@ public class CarColorTest {
         CarColor blueColor = new CarColor("BLUE");
         CarColor greenColor = new CarColor("GREEN");
 
-        CarColor requestColor = new CarColor("BLUE");
+        BookingRequest request = new BookingRequest("BLUE", 0, 0);
 
-        double blueScore = blueColor.score(requestColor);
-        double greenScore = greenColor.score(requestColor);
+        double blueScore = blueColor.score(request);
+        double greenScore = greenColor.score(request);
 
         assertTrue(blueScore > greenScore,
                 "Score of same color car: " + blueScore +

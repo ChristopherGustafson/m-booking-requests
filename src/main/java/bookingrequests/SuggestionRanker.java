@@ -33,9 +33,9 @@ public class SuggestionRanker {
         TreeSet<Suggestion> ranked = new TreeSet<>(Collections.reverseOrder());
 
         for(Suggestion s : suggestions){
-            double carColorScore = s.carColor.score(request.getCarColor());
-            double timeOffsetScore = s.timeOffset.score(request.getTimeOffset());
-            double locationScore = s.location.score(request.getLocation());
+            double carColorScore = s.carColor.score(request);
+            double timeOffsetScore = s.timeOffset.score(request);
+            double locationScore = s.location.score(request);
 
             // Final Score of a suggestions is a weighted sum of all SuggestionAspects
             double finalScore =

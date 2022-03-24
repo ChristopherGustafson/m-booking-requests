@@ -20,15 +20,11 @@ public class Location implements SuggestionAspect{
         return "(" + x + ", " + y + ")";
     }
 
-    // TODO: Throw proper exception SuggestionAspect is not location
     // TODO: Add distance cutoff as parameter
-
     // Calculates the score of the location compared to some requestLocation
     @Override
-    public double score(SuggestionAspect requestAspect) {
-        if(!(requestAspect instanceof Location))
-            throw new IllegalArgumentException("Can only calculate score compared to other Location");
-        Location requestLocation = (Location) requestAspect;
+    public double score(BookingRequest bookingRequest) {
+        Location requestLocation = bookingRequest.getLocation();
 
         double distanceCutoff = 50.0;
         double distance = distanceTo(requestLocation);
