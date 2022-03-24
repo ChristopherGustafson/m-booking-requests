@@ -38,8 +38,8 @@ Running the project requires:
 To build and run the program the command below. Filepaths are given as relative paths from the ``/src/main/resources`` folder.
 For example, the path of the current [suggestions](src/main/resources/data/suggestions.json) file is given as `/data/suggestions.json`
 ```shell
-mvn exec:java 
--Dexec.mainClass=bookingrequests.Main 
+mvn exec:java \
+-Dexec.mainClass=bookingrequests.Main \
 -Dexec.args="<path to suggestions file> <path to booking request file>"
 ```
 
